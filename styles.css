@@ -1,0 +1,181 @@
+:root {
+    --gradientblue1: #2c3e50;
+    --gradientblue2: #4ca1af;
+    --borderblue: #1f2933;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: clamp(16px, 1.5vw, 24px);
+    line-height: 1.5;
+    padding: 20px;
+    background: linear-gradient(90deg, var(--gradientblue1), var(--gradientblue2));
+    color: #fff;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+h1 {
+    margin: 0 auto 20px;
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-weight: bold;
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.2;
+    background-color:var(--borderblue);;
+    padding: 5px 0px;
+    border-radius:10px
+}
+
+/* Input Section */
+.input-section {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 10px;
+    border: 3px solid var(--borderblue);
+    border-radius: 10px;
+    min-width: 60px;
+    font-size: 1rem;
+    color: var(--borderblue);
+    background-color: #fff;
+}
+
+.fetch-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--borderblue);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fetch-button i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#description-text{
+    text-align:center;
+}
+
+/* JSON Container */
+.json-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: auto;
+    display: none; /* Start hidden */
+    flex-direction: column;
+    margin-bottom: 20px;
+    max-height: 470px;
+}
+
+/* JSON Container Header */
+.json-container-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--borderblue);
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Pokemon Image */
+.pokemon-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.pokemon-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* JSON Buttons */
+.json-buttons-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.json-header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: #fff;
+    color: var(--borderblue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    gap: 5px;
+    white-space: nowrap;
+    font-size:0.75rem;
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+}
+
+.clear {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear:hover {
+    background-color: #d62828;
+}
+
+/* Hide button text when body width < 350px */
+@media (max-width: 470px) {
+    .json-header-button .button-text {
+        display: none;
+    }
+}
+
+/* JSON Content */
+#json-content {
+    padding: 10px;
+    color: #000; /* Black text for visibility */
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-family: monospace;
+    font-weight:600;
+    background-color: #fff; /* White background */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    flex: 1; /* Allow content to grow */
+    word-wrap: break-word; /* Prevent text overflow */
+}

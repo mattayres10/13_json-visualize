@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Visualizer 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>JSON Visualizer</h1>
+    <div class="input-section">
+        <div class="input-row">
+            <input type="text" id="url-input" placeholder="Enter a full API URL (e.g., https://jsonplaceholder.typicode.com/posts/1)">
+            <button class="fetch-button" id="fetch-url-button">
+                <i class="fas fa-link"></i>
+            </button>
+        </div>
+        <div class="input-row">
+            <input type="text" id="pokemon-input" placeholder="Enter a Pokemon name (e.g., pikachu)">
+            <button class="fetch-button" id="fetch-pokemon-button">
+                <i class="fas fa-dragon"></i>
+            </button>
+        </div>
+    </div>
+    <p id="description-text">Enter a Pokemon name or URL to visualize data</p>
+    <div class="json-container">
+        <div class="json-container-header">
+            <div class="pokemon-image-container">
+                <img src="" alt="Pokemon" id="pokemon-image">
+            </div>
+            <div class="json-buttons-container">
+                <button class="json-header-button" id="copy-json-button">
+                    <span class="button-text">COPY</span><i class="fas fa-copy"></i>
+                </button>
+                <button class="json-header-button" id="download-json-button">
+                    <span class="button-text">DOWNLOAD</span><i class="fas fa-download"></i>
+                </button>
+                <button class="json-header-button" id="expand-all-button">
+                    <span class="button-text">EXPAND</span><i class="fas fa-expand"></i>
+                </button>
+                <button class="json-header-button" id="collapse-all-button">
+                    <span class="button-text">COLLAPSE</span><i class="fas fa-compress"></i>
+                </button>
+                <button class="clear" id="clear-button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div id="json-content">
+            <!-- JSON Content generated here -->
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
