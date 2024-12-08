@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON Visualizer 2</title>
+    <!-- Fonts and Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Main Title -->
     <h1>JSON Visualizer</h1>
+
+    <!-- Input Section: API URL and Pokemon name inputs -->
     <div class="input-section">
+        <!-- API URL Input -->
         <div class="input-row">
             <input type="text" id="url-input" placeholder="Enter a full API URL (e.g., https://jsonplaceholder.typicode.com/posts/1)">
             <button class="fetch-button" id="fetch-url-button">
                 <i class="fas fa-link"></i>
             </button>
         </div>
+        <!-- Pokemon Name Input -->
         <div class="input-row">
             <input type="text" id="pokemon-input" placeholder="Enter a Pokemon name (e.g., pikachu)">
             <button class="fetch-button" id="fetch-pokemon-button">
@@ -24,12 +30,19 @@
             </button>
         </div>
     </div>
+
+    <!-- Description Text -->
     <p id="description-text">Enter a Pokemon name or URL to visualize data</p>
+
+    <!-- JSON Display Section -->
     <div class="json-container">
+        <!-- JSON Header: Contains Pokemon image and action buttons -->
         <div class="json-container-header">
+            <!-- Pokemon Image (only visible if Pokemon input is used) -->
             <div class="pokemon-image-container">
                 <img src="" alt="Pokemon" id="pokemon-image">
             </div>
+            <!-- Action Buttons: Copy, Download, Expand, Collapse, Clear -->
             <div class="json-buttons-container">
                 <button class="json-header-button" id="copy-json-button">
                     <span class="button-text">COPY</span><i class="fas fa-copy"></i>
@@ -48,10 +61,14 @@
                 </button>
             </div>
         </div>
+
+        <!-- JSON Content Area -->
         <div id="json-content">
-            <!-- JSON Content generated here -->
+            <!-- Dynamic JSON content is rendered here -->
         </div>
     </div>
+
+    <!-- JavaScript File -->
     <script src="script.js" defer></script>
 </body>
 </html>
